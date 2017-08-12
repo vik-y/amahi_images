@@ -1,0 +1,7 @@
+markdown-redmine-container:
+  image: 'docker.io/v4tech/markdown-editor'
+  container_name: "markdown-editor"
+  restart: unless-stopped
+  hostname: 'markdown.example.com'
+  ports:
+    - '12345:80'
