@@ -1,0 +1,9 @@
+nzbget-container:
+  image: 'docker.io/linuxserver/nzbget'
+  container_name: "nzbget"
+  hostname: "nzbget.example.com"
+  restart: unless-stopped
+  ports:
+    - '6789:6789'
+  volumes:
+    - './downloads:/downloads'
