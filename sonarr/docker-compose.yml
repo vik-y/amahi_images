@@ -1,0 +1,11 @@
+sonarr-container:
+  image: 'docker.io/linuxserver/sonarr'
+  container_name: "sonarr"
+  hostname: "sonarr.example.com"
+  restart: unless-stopped
+  ports:
+    - '8989:8989'
+  volumes:
+    - '/etc/localtime:/etc/localtime:ro'
+    - './tv:/tv'
+    - './downloads:/downloads'
