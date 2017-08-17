@@ -1,0 +1,11 @@
+hydra-container:
+  image: 'docker.io/linuxserver/hydra'
+  container_name: "hydra"
+  hostname: "hydra.example.com"
+  restart: unless-stopped
+  ports:
+    - '5075:5075'
+  volumes:
+    - './config:/config'
+    - './downloads:/downloads'
+    - '/etc/localtime:/etc/localtime:ro'
