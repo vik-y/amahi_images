@@ -1,13 +1,11 @@
 logitech-ms-container:
   image: 'docker.io/larsks/logitech-media-server'
-  container_name: "logitechms"
+  container_name: "APP_IDENTIFIER"
   restart: unless-stopped
-  hostname: 'logitechms.example.com'
   ports:
     - '9002:9000'
     - '3484:3483/udp'
   volumes:
     - '/etc/localtime:/etc/localtime:ro'
-    - './squeezebox:/srv/squeezebox' 
+    - './squeezebox:/srv/squeezebox'
     - './audio:/srv/music'
-    
