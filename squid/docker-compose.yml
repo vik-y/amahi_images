@@ -1,0 +1,9 @@
+squid-container:
+  image: 'docker.io/sameersbn/squid:3.3.8-23'
+  container_name: "squid-container"
+  hostname: "squid.example.com"
+  restart: unless-stopped
+  ports:
+    - '3128:3128'
+  volumes:
+    - './cache:/var/spool/squid3'
