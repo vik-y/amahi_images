@@ -1,0 +1,7 @@
+redmine-container:
+  image: 'redmine'
+  container_name: "redmine"
+  restart: unless-stopped
+  hostname: 'redmine.example.com'
+  ports:
+    - '8081:3000'
