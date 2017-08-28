@@ -1,0 +1,12 @@
+radarr-container:
+  image: 'docker.io/linuxserver/radarr'
+  container_name: "radarr"
+  hostname: "radarr.example.com"
+  restart: unless-stopped
+  ports:
+    - '7878:7878'
+  volumes:
+    - './config:/config'
+    - './downloads:/downloads'
+    - './movies:/movies'
+    - '/etc/localtime:/etc/localtime:ro'
