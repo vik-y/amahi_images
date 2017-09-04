@@ -1,0 +1,14 @@
+coppermine-container:
+  build: .
+  container_name: "APP_IDENTIFIER"
+  ports:
+    - "HOST_PORT:80"
+  restart: unless-stopped
+  volumes:
+    - WEBAPP_PATH/html:/var/www/html
+    - /var/lib/mysql/mysql.sock:/var/run/mysql.sock
+    # Uncomment this for development so that the host's static/ folder 
+    # is mounted within the docker container.
+    # - ./static:/usr/src/app/static
+
+
